@@ -1,17 +1,17 @@
 #include <iostream>
 #include <fstream>
-#include"caesarCipher.h"
+#include "caesarCipher.h"
+#include "affineCipher.h"
 
 using namespace std;
 
 int main()
 {
-    //int key;
     string message;
 
     fstream myFile;
 	myFile.open("myFile.txt");
-    myFile<<"computer security";
+    myFile<<"COMPUTER SECURITY";
     myFile.close();
 
 	myFile.open("myFile.txt");
@@ -20,17 +20,23 @@ int main()
     }
     myFile.close();
 
-    caesarCipher t;
-    t.Encrypt(message);
-    cout<<"encrypte message: "<<t.encrypted<<endl;
-    t.Decrypt(t.encrypted);
-    cout<<"decrypte message: "<<t.decrypted<<endl;
+    caesarCipher e;
+    affineCipher e1;
+    e.Encrypt(message);
+    cout<<"encrypte caesar message: "<<e.encrypted<<endl;
+    e1.Encrypt(e.encrypted);
+    cout<<"encrypte affine message: "<<e1.encrypted<<endl;
 
-/*char c = ' ';
-cout<<"enter char"<<endl;
-//cin>>c;
-cout<<(int)c<<endl;
-cout<<char((int)c);
-*/
+
+
+
+
+    e1.Decrypt(e1.encrypted);
+    cout<<"decrypte affine message: "<<e1.decrypted<<endl;
+    e.Decrypt(e1.decrypted);
+    cout<<"decrypte caesar message: "<<e.decrypted<<endl;
+
+
+
     return 0;
 }

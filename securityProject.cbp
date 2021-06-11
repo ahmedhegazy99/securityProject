@@ -36,9 +36,11 @@
 		</Compiler>
 		<Unit filename="include/affineCipher.h" />
 		<Unit filename="include/caesarCipher.h" />
+		<Unit filename="include/cipher.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/affineCipher.cpp" />
 		<Unit filename="src/caesarCipher.cpp" />
+		<Unit filename="src/cipher.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -6,11 +6,11 @@ using namespace std;
 
 caesarCipher::caesarCipher()
 {
-getKey();
+    getKey();
 }
 
 void caesarCipher :: getKey(){
-    cout << "Enter key: ";
+    cout << "Enter caesar key: ";
     cin >> key;
 }
 
@@ -22,7 +22,14 @@ void caesarCipher :: Encrypt(string message){
         if(ascii[i] == 95 || ascii[i] == 32){
             ascii[i] = ascii[i];
         }else{
-            ascii[i]= (((message[i] - 96 + key) % 26)+ 96);
+            if (isupper(ascii[i])){
+                if(((message[i] - 64 + key) % 26) <= 0)
+                    ascii[i]= (((message[i] - 64 + key) % 26)+ 26 + 64);
+                else
+                    ascii[i]= (((message[i] - 64 + key) % 26)+ 64);
+                //cout<<"message[i] - 64 + key = "<<message[i] - 64 + key<<"  "<<"((message[i] - 64 + key) % 26)"<<((message[i] - 64 + key) % 26)<<endl;
+            }else
+                ascii[i]= (((message[i] - 96 + key) % 26)+ 96);
         }
     }
     encrypted = AT(ascii);
@@ -37,12 +44,19 @@ void caesarCipher :: Decrypt(string message){
         if(ascii[i] == 95 || ascii[i] == 32){
             ascii[i] = ascii[i];
         }else{
-            if(((message[i] - 96 - key) % 26) <= 0)
-                ascii[i]= (((message[i] - 96 - key) % 26)+ 26 + 96);
-            else
-                ascii[i]= (((message[i] - 96 - key) % 26)+ 96);
+            if (isupper(ascii[i])){
+                if(((message[i] - 64 - key) % 26) <= 0)
+                    ascii[i]= (((message[i] - 64 - key) % 26)+ 26 + 64);
+                else
+                    ascii[i]= (((message[i] - 64 - key) % 26)+ 64);
+            }else{
+                if(((message[i] - 96 - key) % 26) <= 0)
+                    ascii[i]= (((message[i] - 96 - key) % 26)+ 26 + 96);
+                else
+                    ascii[i]= (((message[i] - 96 - key) % 26)+ 96);
             }
         }
+    }
          decrypted = AT(ascii);
     }
 

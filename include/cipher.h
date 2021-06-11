@@ -7,10 +7,11 @@ class cipher
 {
     private:
         int key;
-        //int bin[];
+        const static int l = 20;
 
     protected:
-        int ascii[20];
+        int ascii[l];
+        int bin[l];
 
     public:
         string encrypted="";
