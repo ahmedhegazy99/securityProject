@@ -6,25 +6,23 @@ using namespace std;
 class cipher
 {
     private:
-
         int key;
         //int bin[];
 
-
     protected:
-        int ascii[50];
+        int ascii[20];
 
     public:
-        string encrypted;
-        string decrypted;
+        string encrypted="";
+        string decrypted="";
         cipher();
-        //void Encrypt(string message);
-        //void Decrypt(string message);
+        void Encrypt(string message);
+        void Decrypt(string message);
         void getKey();
         void cAscii(string text);
-        //void cBinary(int ascii);
-        //void BA(int bin);
-        void AT(int ascii[]);
+        void cBinary(int ascii);
+        void BA(int bin);
+        string AT(int ascii[]);
 
 };
 

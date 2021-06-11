@@ -15,6 +15,7 @@ class caesarCipher : public cipher
         caesarCipher();
         void Encrypt(string message);
         void Decrypt(string message);
+        void getKey();
 
 };
 

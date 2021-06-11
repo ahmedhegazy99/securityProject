@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int key;
+    //int key;
     string message;
 
     fstream myFile;
@@ -16,13 +16,15 @@ int main()
 
 	myFile.open("myFile.txt");
 	while (getline (myFile, message)) {
-        cout <<"Plain Text: "<< message;
+        cout <<"Plain Text: "<< message<<endl;
     }
     myFile.close();
 
-   /* caesarCipher t;
-    t.Encrypt(message);*/
-
+    caesarCipher t;
+    t.Encrypt(message);
+    cout<<"encrypte message: "<<t.encrypted<<endl;
+    t.Decrypt(t.encrypted);
+    cout<<"decrypte message: "<<t.decrypted<<endl;
 
 /*char c = ' ';
 cout<<"enter char"<<endl;

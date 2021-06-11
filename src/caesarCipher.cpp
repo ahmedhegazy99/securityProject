@@ -5,20 +5,21 @@
 using namespace std;
 
 caesarCipher::caesarCipher()
-{}
+{
+getKey();
+}
 
-void cipher :: getKey(){
+void caesarCipher :: getKey(){
     cout << "Enter key: ";
     cin >> key;
 }
 
 void caesarCipher :: Encrypt(string message){
-    int i;
-
+    unsigned int i;
     cAscii(message);
 
-    for (i=0; i<message.length(); i++){
-        if(ascii[i] == 46 || ascii[i] == 32){
+    for (i=0; i< message.size(); i++){
+        if(ascii[i] == 95 || ascii[i] == 32){
             ascii[i] = ascii[i];
         }else{
             ascii[i]= (((message[i] - 96 + key) % 26)+ 96);
@@ -33,16 +34,16 @@ void caesarCipher :: Decrypt(string message){
     cAscii(message);
 
     for (i=0; i<message.length(); i++){
-        if(ascii[i] == 46 || ascii[i] == 32){
+        if(ascii[i] == 95 || ascii[i] == 32){
             ascii[i] = ascii[i];
         }else{
-            if(ascii[i]= ((message[i] - 96 - key) % 26) == 0)
+            if(((message[i] - 96 - key) % 26) <= 0)
                 ascii[i]= (((message[i] - 96 - key) % 26)+ 26 + 96);
             else
                 ascii[i]= (((message[i] - 96 - key) % 26)+ 96);
             }
         }
+         decrypted = AT(ascii);
     }
-    decrypted = AT(ascii);
-}
+
 
