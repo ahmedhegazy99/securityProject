@@ -11,7 +11,6 @@ class cipher
 
     protected:
         int ascii[l];
-        int bin[l];
         int key;
 
     public:
@@ -22,7 +21,6 @@ class cipher
         void Decrypt(string message);
         void getKey();
         void cAscii(string text);
-        void cBinary(int ascii);
         void BA(int bin);
         string AT(int ascii[]);
 

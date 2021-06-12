@@ -16,17 +16,22 @@ void cipher::cAscii(string message){
 }
 
 string cipher::AT(int ascii[]){
-    string text="000000000000000";
+    string text="00000000000000000";
     for(int i = 0 ; i< 17 ; i++ ){
         text[i]= char(ascii[i]);
     }
     return text;
 }
 
+void cBinary(int ascii){
+
+}
+
+void BA(int bin){}
+
 void Encrypt(string message){}
 void Decrypt(string message){}
-void cBinary(int ascii){}
-void BA(int bin){}
+
 
 
 

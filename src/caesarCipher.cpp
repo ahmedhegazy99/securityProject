@@ -17,7 +17,7 @@ void caesarCipher :: getKey(){
 void caesarCipher :: Encrypt(string message){
     unsigned int i;
     cAscii(message);
-cout<<"caesar key: "<<key<<endl;
+
     for (i=0; i< message.size(); i++){
         if(ascii[i] == 95 || ascii[i] == 32){
             ascii[i] = ascii[i];
