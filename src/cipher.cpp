@@ -16,7 +16,7 @@ void cipher::cAscii(string message){
 }
 
 string cipher::AT(int ascii[]){
-    string text="00000000000000000";
+    string text="000000000000000";
     for(int i = 0 ; i< 17 ; i++ ){
         text[i]= char(ascii[i]);
     }

@@ -6,12 +6,13 @@ using namespace std;
 class cipher
 {
     private:
-        int key;
+        //int key;
         const static int l = 20;
 
     protected:
         int ascii[l];
         int bin[l];
+        int key;
 
     public:
         string encrypted="";

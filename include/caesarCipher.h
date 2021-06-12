@@ -1,22 +1,16 @@
 #ifndef CAESARCIPHER_H
 #define CAESARCIPHER_H
 #include "cipher.h"
-#include <string>
-
 
 class caesarCipher : public cipher
 {
     private:
-
-        int key;
-
+        void getKey();
 
     public:
         caesarCipher();
         void Encrypt(string message);
         void Decrypt(string message);
-        void getKey();
-
 };
 
 #endif // CAESARCIPHER_H
