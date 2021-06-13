@@ -11,10 +11,27 @@ affineCipher::affineCipher()
 }
 
 void affineCipher :: getKey(){
-    cout << "Enter affine key: ";
+    cout << "Enter affine key ( 1 integer ): ";
     cin >> key;
-    cout << "Enter m: ";
+    cout << "Enter m ( 1 integer ): ";
     cin >> m;
+
+    //get m inverse
+    for (int i = 0; i < 26; i++){
+        flag = (m * i) % 26;
+        if (flag == 1){ mi = i;}
+    }
+    while((m*mi)%26 != 1){
+        cout << "This number has no inverse." << endl << "Please enter new m: " ;
+        cin >> m;
+        mi = 0;
+        flag = 0;
+        for (int i = 0; i < 26; i++){
+            flag = (m * i) % 26;
+            if (flag == 1){ mi = i;}
+        }
+    }
+
 }
 
 void affineCipher :: Encrypt(string message){
@@ -36,14 +53,6 @@ void affineCipher :: Encrypt(string message){
 
 void affineCipher :: Decrypt(string message){
     unsigned int i;
-    int mi = 0;
-    int flag = 0;
-
-    //get m inverse
-    for (int i = 0; i < 26; i++){
-        flag = (m * i) % 26;
-        if (flag == 1){ mi = i;}
-    }
 
     cAscii(message);
 

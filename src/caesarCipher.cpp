@@ -10,7 +10,7 @@ caesarCipher::caesarCipher()
 }
 
 void caesarCipher :: getKey(){
-    cout << "Enter caesar key: ";
+    cout << "Enter caesar key ( 1 integer ): ";
     cin >> key;
 }
 

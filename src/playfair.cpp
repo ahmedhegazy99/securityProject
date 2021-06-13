@@ -7,7 +7,7 @@ using namespace std;
 
 playfair::playfair()
 {
-    //getKey();
+    getKey();
 }
 
 int Mod(int a, int b){
@@ -15,7 +15,7 @@ int Mod(int a, int b){
 }
 
 void playfair :: getKey(){
-    cout << "Please enter the key (PlayFair): "<<endl;
+    cout << "Enter PlayFair key ( 1 integer ): "<<endl;
 	cin >> key;
 }
 

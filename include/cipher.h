@@ -5,12 +5,8 @@ using namespace std;
 
 class cipher
 {
-    private:
-        //int key;
-        const static int l = 20;
-
     protected:
-        int ascii[l];
+        int ascii[20];
         int key;
 
     public:

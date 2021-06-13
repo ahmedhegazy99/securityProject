@@ -9,7 +9,7 @@ vigenereCipher::vigenereCipher()
 }
 
 void vigenereCipher :: getKey(){
-    cout << "Enter 4 vigenere keys : ";
+    cout << "Enter vigenere keys ( 4 integers ): ";
     for(int i=0; i<4; i++){
         cin>>key[i];
     }

@@ -10,7 +10,8 @@ class affineCipher : public cipher
         void Decrypt(string message);
 
     private:
-        int m;
+        int m, mi = 0;
+        int flag = 0;
         void getKey();
 };
 

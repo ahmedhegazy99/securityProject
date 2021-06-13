@@ -9,7 +9,7 @@ fallVigenere::fallVigenere()
 }
 
 void fallVigenere :: getKey(){
-    cout << "Enter Fall Vigenere Word key : ";
+    cout << "Enter Fall Vigenere Word key ( capital ): ";
     cin>>key;
 }
 

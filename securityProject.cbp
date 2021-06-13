@@ -37,10 +37,20 @@
 		<Unit filename="include/affineCipher.h" />
 		<Unit filename="include/caesarCipher.h" />
 		<Unit filename="include/cipher.h" />
+		<Unit filename="include/fallVigenere.h" />
+		<Unit filename="include/inverseShift.h" />
+		<Unit filename="include/playfair.h" />
+		<Unit filename="include/sBoxCipher.h" />
+		<Unit filename="include/vigenereCipher.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/affineCipher.cpp" />
 		<Unit filename="src/caesarCipher.cpp" />
 		<Unit filename="src/cipher.cpp" />
+		<Unit filename="src/fallVigenere.cpp" />
+		<Unit filename="src/inverseShift.cpp" />
+		<Unit filename="src/playfair.cpp" />
+		<Unit filename="src/sBoxCipher.cpp" />
+		<Unit filename="src/vigenereCipher.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
