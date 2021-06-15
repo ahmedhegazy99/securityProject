@@ -23,14 +23,11 @@ string cipher::AT(int ascii[]){
     return text;
 }
 
-void cBinary(int ascii){
-
-}
-
-void BA(int bin){}
-
 void Encrypt(string message){}
 void Decrypt(string message){}
+
+
+
 
 
 

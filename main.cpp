@@ -21,10 +21,10 @@ int main()
     myFile.close();
 
 	myFile.open("myFile.txt");
-	while (getline (myFile, message)) {
-        cout <<"Plain Text: "<< message<<endl;
-    }
+    getline (myFile, message);
     myFile.close();
+
+    cout <<"Plain Text: "<< message<<endl;
 
     caesarCipher e;
     affineCipher e1;
@@ -51,7 +51,9 @@ int main()
     //cout<<"encrypted binary sBox message: "<<endl<<e6.encryptedStr<<endl;
     cout<<"\nEncrypted S-Box message: "<<endl<<e6.encryptedDec<<endl;
 
-
+    myFile.open("myFile.txt", ios::app);
+    myFile<<e6.encryptedDec<<endl;
+    myFile.close();
 
     e6.Decrypt(e6.encrypted);
     //cout<<"decrypted sBox message: "<<endl<<e6.decryptedStr<<endl;
@@ -68,6 +70,10 @@ int main()
     cout<<"Decrypted affine message: "<<e1.decrypted<<endl;
     e.Decrypt(e1.decrypted);
     cout<<"Decrypted caesar message: "<<e.decrypted<<endl;
+
+    myFile.open("myFile.txt", ios::app);
+    myFile<<e.decrypted<<endl;
+    myFile.close();
 
     return 0;
 }

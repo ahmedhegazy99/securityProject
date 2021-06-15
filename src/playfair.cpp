@@ -15,7 +15,7 @@ int Mod(int a, int b){
 }
 
 void playfair :: getKey(){
-    cout << "Enter PlayFair key ( 1 integer ): "<<endl;
+    cout << "Enter PlayFair key ( 1 word ): "<<endl;
 	cin >> key;
 }
 
